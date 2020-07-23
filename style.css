@@ -16,6 +16,11 @@ html {
   background-color: #f4f4f4;
 }
 
+.hamburger_menu,
+.hamburger_menu {
+  display: none;
+}
+
 .wbk {
   background-color: #fff !important;
 }
@@ -477,7 +482,7 @@ footer {
     top: 57%;
   }
 
-  .hamburger_menu{
+  .hamburger_menu {
     position: fixed;
     top: 0;
     right: -110%;
@@ -488,11 +493,11 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-left: 2px #000 solid; 
-    transition: right .4s;
+    border-left: 2px #000 solid;
+    transition: right 0.4s;
   }
 
-  .hamburger_menu >*{
+  .hamburger_menu > * {
     font-size: 20px;
     color: #000;
     text-decoration: none;
@@ -505,24 +510,24 @@ footer {
     z-index: 20;
   }
 
-  .hamburger_menu >*:last-child{
+  .hamburger_menu > *:last-child {
     border-bottom: 1px solid #000;
   }
 
-  .hamburger_menu >*:hover{
+  .hamburger_menu > *:hover {
     background-color: rgba(110, 204, 110, 0.836);
   }
 
-  .active{
+  .active {
     background-color: rgba(110, 204, 110, 0.836);
   }
 
   .hamDropBtn:hover,
-  .hamDrop{
+  .hamDrop {
     background-color: #fff !important;
   }
 
-  .hamDrop{
+  .hamDrop {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -530,7 +535,7 @@ footer {
     padding: 0;
   }
 
-  .hamDrop >*{
+  .hamDrop > * {
     font-size: 15px;
     color: #000;
     text-decoration: none;
@@ -543,17 +548,15 @@ footer {
     z-index: 10;
   }
 
-  .hamDrop >*:hover{
+  .hamDrop > *:hover {
     background-color: rgba(110, 204, 110, 0.836);
   }
 
-  .hamDropActive{
+  .hamDropActive {
     display: flex;
   }
 
-  .hamburger_menuActive{
+  .hamburger_menuActive {
     right: 0;
   }
-
-  
 }
