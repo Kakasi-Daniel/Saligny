@@ -60,4 +60,12 @@ const UI = (function () {
       document.querySelector('.hamburger_btn').style.top = '5%';
     }
   };
+
+  document.querySelector('.hamDropBtn').addEventListener('click', () =>{
+    document.querySelector('.hamDrop').classList.toggle('hamDropActive');
+  });
+
+  document.querySelector('.hamburger_btn').onclick = () => {
+    document.querySelector('.hamburger_menu').classList.toggle('hamburger_menuActive');
+  }
 })();
