@@ -65,7 +65,8 @@ const UI = (function () {
     document.querySelector('.hamDrop').classList.toggle('hamDropActive');
   });
 
-  document.querySelector('.hamburger_btn').onclick = () => {
+  document.querySelector('.hamburger_btn').onclick = e => {
+    document.querySelector('.hamburger_btn').classList.toggle('close');
     document.querySelector('.hamburger_menu').classList.toggle('hamburger_menuActive');
   }
 })();
