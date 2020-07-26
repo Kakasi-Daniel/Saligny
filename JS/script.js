@@ -1,3 +1,6 @@
+import '../Sass/main.scss';
+
+
 const UI = (function () {
 
   const showDropdown = function (d) {
