@@ -2,6 +2,8 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './JS/script.js',
@@ -15,7 +17,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,'css-loader','sass-loader'
+          MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader'
         ]
       },
       {
@@ -44,5 +46,13 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin({
     filename: 'style.css'
-  })]
+  }),
+  new webpack.LoaderOptionsPlugin({
+    options: {
+        postcss: [
+            autoprefixer()
+        ]
+    }
+})
+]
 }
